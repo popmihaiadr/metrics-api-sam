@@ -27,8 +27,6 @@ Resources:
         - sg-050e13dd8cab462fe
         SubnetIds:
         - subnet-0f703fc3a483b865f
-      Environment:
-        Variables: null
       Events:
         Api:
           Type: Api
@@ -54,8 +52,6 @@ Resources:
         - sg-050e13dd8cab462fe
         SubnetIds:
         - subnet-0f703fc3a483b865f
-      Environment:
-        Variables: null
       Events:
         Api:
           Type: Api

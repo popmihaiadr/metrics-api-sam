@@ -4,11 +4,11 @@ import {
   } from "@aws-sdk/client-secrets-manager";
   import pkg from 'pg';
   const {Pool} = pkg;
-   const host = process.env.DB_ENDPOINT_ADDRESS || '';
-    console.log(`host:${host}`);
-    const database = process.env.DB_NAME || '';
-    const secret_name = process.env.secret_name || '';  
-    const region= process.env.region || '';  
+  //need to fix env fetching
+  //  const host = process.env.DB_ENDPOINT_ADDRESS || '';
+  //  const database = process.env.DB_NAME || '';
+  //   const secret_name = process.env.secret_name || '';  
+  //   const region= process.env.region || '';  
   
   const client = new SecretsManagerClient({
     region:"us-east-1",
@@ -30,15 +30,13 @@ import {
   }
   
   const secret = response.SecretString;
-  
-  console.log(secret);
+
   
       
     
   const { username } = JSON.parse(secret);
   const { password } = JSON.parse(secret);
-  console.log(password);
-  console.log(username);
+
 
 export const postUserHandler = async (event) => {
     if (event.httpMethod !== 'POST') {
