@@ -20,7 +20,7 @@ Globals:
     Tracing: Active
   Api:
     TracingEnabled: true
-     Cors:
+    Cors:
       AllowOrigin: "'https://metrics-playground.click/'"
       AllowHeaders: "'Content-Type'"
       AllowMethods: "'GET,POST,OPTIONS'"
