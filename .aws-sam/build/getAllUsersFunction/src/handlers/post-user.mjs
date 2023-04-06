@@ -39,9 +39,9 @@ import {
 
 
 export const postUserHandler = async (event) => {
-    if (event.httpMethod !== 'POST') {
-        throw new Error(`postMethod only accepts POST method, you tried: ${event.httpMethod} method.`);
-    }
+    // if (event.httpMethod !== 'POST') {
+    //     throw new Error(`postMethod only accepts POST method, you tried: ${event.httpMethod} method.`);
+    // }
     // All log statements are written to CloudWatch
     console.info('received:', event);
 
@@ -72,6 +72,11 @@ export const postUserHandler = async (event) => {
      
       const response = {
         statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "*", // Allow from anywhere 
+          "Access-Control-Allow-Methods": "POST, OPTIONS" // Allow only POST request 
+      },
         body: JSON.stringify(body)
     };
 

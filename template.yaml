@@ -71,6 +71,9 @@ Resources:
       Runtime: nodejs18.x
       Architectures:
       - x86_64
+      Policies:
+       - AWSSecretsManagerGetSecretValuePolicy:
+            SecretArn: "arn:aws:secretsmanager:us-east-1:337759669531:secret:rds!db-e7d46044-ec53-46d0-b2e1-cd26b6ff64de-UYcHTx"
       MemorySize: 128
       Timeout: 100
       Description: A simple example includes a HTTP post method to add one user to
