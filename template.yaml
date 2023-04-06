@@ -20,6 +20,10 @@ Globals:
     Tracing: Active
   Api:
     TracingEnabled: true
+     Cors:
+      AllowOrigin: "'https://metrics-playground.click/'"
+      AllowHeaders: "'Content-Type'"
+      AllowMethods: "'GET,POST,OPTIONS'"
 
 Resources:
   # Each Lambda function is defined by properties:
@@ -76,7 +80,7 @@ Resources:
           - sg-050e13dd8cab462fe
         SubnetIds:
           - subnet-0f703fc3a483b865f
-    
+     
       Events:
         Api:
           Type: Api
