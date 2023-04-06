@@ -70,7 +70,11 @@ export const getAllUsersHandler = async (event) => {
   console.info('user:', results.rows);
     
   const response = {
-    statusCode: 200,
+    statusCode: 200, headers: {
+      "Access-Control-Allow-Headers" : "Content-Type",
+      "Access-Control-Allow-Origin": "*", // Allow from anywhere 
+      "Access-Control-Allow-Methods": "GET" // Allow only GET request 
+  },
     body: JSON.stringify(results.rows)
    
 };
