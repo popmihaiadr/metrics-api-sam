@@ -75,7 +75,7 @@ export const postUserHandler = async (event) => {
         headers: {
           "Access-Control-Allow-Headers" : "Content-Type",
           "Access-Control-Allow-Origin": "*", // Allow from anywhere 
-          "Access-Control-Allow-Methods": "POST" // Allow only POST request 
+          "Access-Control-Allow-Methods": "POST,OPTIONS" // Allow only POST request 
       },
         body: JSON.stringify(body)
     };

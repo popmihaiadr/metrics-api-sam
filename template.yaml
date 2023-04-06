@@ -21,9 +21,9 @@ Globals:
   Api:
     TracingEnabled: true
     Cors:
+      AllowMethods: "'GET,POST,OPTIONS'"
+      AllowHeaders: "'content-type'"
       AllowOrigin: "'*'"
-      AllowHeaders: "'Content-Type'"
-      AllowMethods: "'GET,POST'"
 
 Resources:
   # Each Lambda function is defined by properties:
