@@ -21,9 +21,9 @@ Globals:
   Api:
     TracingEnabled: true
     Cors:
-      AllowOrigin: "'https://metrics-playground.click/'"
+      AllowOrigin: "'*'"
       AllowHeaders: "'Content-Type'"
-      AllowMethods: "'GET,POST,OPTIONS'"
+      AllowMethods: "'GET,POST'"
 
 Resources:
   # Each Lambda function is defined by properties:
